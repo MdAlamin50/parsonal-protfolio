@@ -11,48 +11,59 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicon.min.css">
+<link rel="stylesheet" href="./img/logo.svg">
 </head>
-<body class="bg-slate-800" style="  font-family: Poppins", sans-serif;>
+<body class="container mx-auto" style="  font-family: Poppins", sans-serif;>
     <!-- header section -->
-   <nav class="py-5 bg-white sticky top-0 border-b border-gray-100">
-   <div class="container md:px-12 md:flex md:items-center md:justify-between">
-    <div class="flex items-center justify-between">
-        <a href="#" class="flex items-center">
-            <img src="icon/122.png" alt="logo" class="h-10 mr-3">
-            <span class="text-2xl text-gray-900 font-sans font-bold">Portfolio</span>
-        </a>
-        <span class="block mx-2 text-3xl bg-gray-100 p-2 rounded-lg md:hidden">
-            <img src="icon/menu.svg" alt="" name="menu" onclick="Menu(this)" class="w-4 h-4">
-        </span>
-    </div>
-    <ul class="p-5 z-10 absolute bg-white/80 backdrop-blur w-full left-0 py-4 opacity-0 top-[-400px] transition-all ease-in duration-500 md:p-0 md:flex md:items-center md:static md:w-auto md:opacity-100 md:space-x-8">
-        <li class="md:my-0">
-            <a href="#home" class="font-medium duration-500 text-gray-900 hover:text-indigo-600">Home</a>
-        </li>
-        <li class="my-6 md:my-0">
-            <a href="about" class="font-medium duration-500 text-gray-900 hover:text-indigo-600">About</a>
-        </li>
-        <li class="my-6 md:my-0">
-            <a href="service" class="font-medium duration-500 text-gray-900 hover:text-indigo-600">Services</a>
-        </li>
-        <li class="my-6 md:my-0">
-            <a href="Skill" class="font-medium duration-500 text-gray-900 hover:text-indigo-600">Skill</a>
-        </li>
-        <li class="my-6 md:my-0">
-            <a href="project" class="font-medium duration-500 text-gray-900 hover:text-indigo-600">Project</a>
-        </li>
-        <li class="my-6 md:my-0">
-            <a href="contact" class="font-medium duration-500 text-gray-900 hover:text-indigo-600">Contact</a>
-        </li>
-        <a href="#">
-            <button type="button" class="w-full text-white bg-indigo-600 font-medium rounded-lg px-3.5 py-3 text-center hover:bg-indigo-500 hover:drop-shadow-md transition duration-300 ease-in-out">Get Started</button>
-        </a>
-    </ul>
-   </div>   
-   </nav>
+     <nav class="py-5 bg-white sticky top-0 bordere-b border-gray-100">
+      <div class="container md:px-12 md:flex md:item-center md:justify-between">
+        <div class="flex items-center justify-between">
+            <a href="#" class="flex items-center">
+                <img src="icon/122.png" alt="logo" class="h-10 mr-3">
+                <span class="text-2xl text-gray-900 font-sans font-bold">Portfolio</span>
+            </a>
+            <span class="block mx-2 text-3xl bg-gray-100 p-2 rounded-lg md:hidden">
+                <!-- <img onclick="Menu(this)" class="w-6 h-6" src="icon/bx-menu.svg" alt=""> -->
+                <svg name="menu" onclick="Menu(this)" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.7" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                  </svg>                 
+            </span>
+        </div>
+        <ul class="p-5 z-10 absolute bg-white/80 backdrop-blur w-full left-0 py-4 opacity-0 top-[-400px] transition-all ease-in duration-500 md:p-0 md:flex md:items-center md:space-x-8 md:static md:w-auto md:opacity-100">
+            <li class="md:my-0">
+                <a href="#hoem" class="font-medium duration-500 text-gray-900 hover:text-indigo-600">Home</a>
+            </li>
+            <li class="my-6 md:my-0">
+                <a href="#about" class="font-medium duration-500 text-gray-900 hover:text-indigo-600">About</a>
+            </li>
+            <li class="my-6 md:my-0">
+                <a href="#about" class="font-medium duration-500 text-gray-900 hover:text-indigo-600">About</a>
+            </li>
+            <li class="my-6 md:my-0">
+                <a href="#Skill" class="font-medium duration-500 text-gray-900 hover:text-indigo-600">Skill</a>
+            </li>
+            <li class="my-6 md:my-0">
+                <a href="#Project" class="font-medium duration-500 text-gray-900 hover:text-indigo-600">Project</a>
+            </li>
+            <li class="my-6 md:my-0">
+                <a href="#contact" class="font-medium duration-500 text-gray-900 hover:text-indigo-600">Contact</a>
+            </li>
+            <a href="#">
+                <button type="button" class="w-full text-white bg-indigo-600 font-medium rounded-lg px-3.5 py-3 text-center hover:bg-indigo-500 hover:drop-shadow-md transition duration-300 ease-in-out">Get Started</button>
+            </a>
+        </ul>
+      </div>
+     </nav>
+
+    
    
-   
-  
+   <script>
+    function Menu(e) {
+        let list = document.querySelector('ul');
+
+        e.name === 'menu' ? (e.name = "close",list.classList.add('top-[80px]'), list.classList.add("opacity-100")) : (e.name = "menu", list.classList.remove('top-[80px]'), list.classList.remove('opacity-100'))
+    }
+   </script>
 </body>
 </html>
-
